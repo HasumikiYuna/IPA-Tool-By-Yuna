@@ -1,6 +1,6 @@
 # action-ipadown
 
-ải xuống phiên bản cũ của ứng dụng bằng Github Actions mà không cần máy tính!
+Tải xuống phiên bản cũ của ứng dụng bằng Github Actions mà không cần máy tính!
 
 **Cảnh báo: Hiện tại KHÔNG hỗ trợ tài khoản 2FA**
 
