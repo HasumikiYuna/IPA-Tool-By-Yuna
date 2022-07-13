@@ -11,36 +11,36 @@ on:
   workflow_dispatch:
     inputs:
       appleId:
-        description: 'Apple ID Account'
+        description: 'Tài khoản ID Apple'
         required: true
       appleIdPwd:
-        description: 'Apple ID Password'
+        description: 'Mật khẩu ID Apple'
         required: true
       operation:
-        description: 'Operation to do, choices: lookup, historyver, download, historyver_id, download_id'
+        description: 'Thao tác để làm, lựa chọn: lookup, historyver, download, historyver_id, download_id'
       
       appBundleId:
-        description: 'AppStore Bundle-ID (needed when using non-*_id operations)'
+        description: 'ID gói AppStore (cần thiết khi sử dụng non-*_id operations)'
         required: false
       appCountry:
-        description: 'AppStore Country (needed when using non-*_id operations)'
+        description: 'Quốc gia AppStore (cần thiết khi sử dụng non-*_id operations)'
         required: false
-        default: 'JP'
+        default: 'VN'
       
       appVerId:
-        description: 'App Version Id Number (for downloading history versions)'
+        description: 'Số Id phiên bản ứng dụng (để tải xuống các phiên bản lịch sử)'
         required: false
 
       appId:
-        description: 'App Id Number (needed when using *_id operations)'
+        description: 'Số Id ứng dụng (cần thiết khi sử dụng *_id operations)'
         required: false
       
       debug_enabled:
-        description: 'Run the build with RDP debugging enabled'
+        description: 'Chạy bản dựng có bật gỡ lỗi RDP'
         required: false
         default: false
       itunes_debug_enabled:
-        description: 'Run the build with ngrok debugging enabled'
+        description: 'Chạy bản dựng có bật gỡ lỗi ngrok'
         required: false
         default: false
 
