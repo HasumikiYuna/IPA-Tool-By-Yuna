@@ -39,11 +39,16 @@ Hiện có năm hoạt động: lookup, historyver, download, historyver_id, dow
 
 Để sử dụng các thao tác này, hãy nhập thông tin ứng dụng của bạn như sau:
 - Sử dụng ID gói:
-  ![image](https://user-images.githubusercontent.com/5344431/167506427-1503417c-112f-4c45-b82b-7887f05b0dac.png)
+
+![image](https://user-images.githubusercontent.com/5344431/167506427-1503417c-112f-4c45-b82b-7887f05b0dac.png)
+
 - Sử dụng appID:
-  ![image](https://user-images.githubusercontent.com/5344431/167506645-d29db175-ab38-45d3-b224-6cc94131e61d.png)
+
+![image](https://user-images.githubusercontent.com/5344431/167506645-d29db175-ab38-45d3-b224-6cc94131e61d.png)
+
 - Đồng thời cung cấp cho appVerID:
-  ![image](https://user-images.githubusercontent.com/5344431/167506870-8dcaa565-3bd1-424e-a9d2-eed00bd4cffb.png)
+
+- ![image](https://user-images.githubusercontent.com/5344431/167506870-8dcaa565-3bd1-424e-a9d2-eed00bd4cffb.png)
 
 ## Credits
 
