@@ -11,36 +11,37 @@ on:
   workflow_dispatch:
     inputs:
       appleId:
-        description: 'Tài khoản ID Apple'
+        description: 'Apple ID Account'
         required: true
       appleIdPwd:
-        description: 'Mật khẩu ID Apple'
+        description: 'Apple ID Password'
         required: true
       operation:
-        description: 'Thao tác để làm, lựa chọn: lookup, historyver, download, historyver_id, download_id'
-      
+        description: 'Operation to do, choices: lookup, historyver, download, historyver_id, download_id'
+        default: 'download_id'
+         
       appBundleId:
-        description: 'ID gói AppStore (cần thiết khi sử dụng non-*_id operations)'
+        description: 'AppStore Bundle-ID (needed when using non-*_id operations)'
         required: false
       appCountry:
-        description: 'Quốc gia AppStore (cần thiết khi sử dụng non-*_id operations)'
+        description: 'AppStore Country (needed when using non-*_id operations)'
         required: false
-        default: 'VN'
+        default: 'US'
       
       appVerId:
-        description: 'Số Id phiên bản ứng dụng (để tải xuống các phiên bản lịch sử)'
+        description: 'App Version Id Number (for downloading history versions)'
         required: false
 
       appId:
-        description: 'Số Id ứng dụng (cần thiết khi sử dụng *_id operations)'
+        description: 'App Id Number (needed when using *_id operations)'
         required: false
       
       debug_enabled:
-        description: 'Chạy bản dựng có bật gỡ lỗi RDP'
+        description: 'Run the build with RDP debugging enabled'
         required: false
         default: false
       itunes_debug_enabled:
-        description: 'Chạy bản dựng có bật gỡ lỗi ngrok'
+        description: 'Run the build with ngrok debugging enabled'
         required: false
         default: false
 
@@ -99,7 +100,6 @@ jobs:
             else
               appVerCmd="--appVerId ${{ github.event.inputs.appVerId }}"
             fi
-
             if [[ "$op" == "download" ]]; then
               output=$(python3 ipatool-py/main.py --json lookup -b ${{ github.event.inputs.appBundleId }} -c ${{ github.event.inputs.appCountry }} \
                                                 download -o ipaDown -s http://127.0.0.1:9000 $appVerCmd)
