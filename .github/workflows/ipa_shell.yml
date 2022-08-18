@@ -11,13 +11,13 @@ on:
   workflow_dispatch:
     inputs:
       appleId:
-        description: 'Tài khoản ID Apple'
+        description: 'Apple ID Account'
         required: true
       appleIdPwd:
-        description: 'Mật khẩu ID Apple'
+        description: 'Apple ID Password'
         required: true
       itunes_debug_enabled:
-        description: 'Chạy bản dựng có bật gỡ lỗi ngrok'
+        description: 'Run the build with ngrok debugging enabled'
         required: false
         default: false
 
