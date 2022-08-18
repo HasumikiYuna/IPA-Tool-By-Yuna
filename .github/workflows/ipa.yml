@@ -99,7 +99,6 @@ jobs:
             else
               appVerCmd="--appVerId ${{ github.event.inputs.appVerId }}"
             fi
-
             if [[ "$op" == "download" ]]; then
               output=$(python3 ipatool-py/main.py --json lookup -b ${{ github.event.inputs.appBundleId }} -c ${{ github.event.inputs.appCountry }} \
                                                 download -o ipaDown -s http://127.0.0.1:9000 $appVerCmd)
