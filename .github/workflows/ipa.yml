@@ -1,5 +1,5 @@
 # vim: expandtab tabstop=2 shiftwidth=2
-name: IPA Down
+name: Trích IPA
 
 env:
   PYTHONIOENCODING: utf-8
@@ -11,37 +11,37 @@ on:
   workflow_dispatch:
     inputs:
       appleId:
-        description: 'Apple ID Account'
+        description: 'Nhập Apple ID'
         required: true
       appleIdPwd:
-        description: 'Apple ID Password'
+        description: 'Nhập Mật Khẩu'
         required: true
       operation:
-        description: 'Operation to do, choices: lookup, historyver, download, historyver_id, download_id'
-        default: 'download_id'
+        description: 'Thao tác Tác Vụ, Chọn: lookup, historyver, download, historyver_id, download_id'
+        default: 'download'
          
       appBundleId:
-        description: 'AppStore Bundle-ID (needed when using non-*_id operations)'
+        description: 'AppStore Bundle-ID (cần thiết khi sử dụng)'
         required: false
       appCountry:
-        description: 'AppStore Country (needed when using non-*_id operations)'
+        description: 'AppStore Country (cần thiết khi sử dụng các thao tác)'
         required: false
         default: 'US'
       
       appVerId:
-        description: 'App Version Id Number (for downloading history versions)'
+        description: 'Số ID phiên bản ứng dụng (để tải xuống các phiên bản thấp hơn)'
         required: false
 
       appId:
-        description: 'App Id Number (needed when using *_id operations)'
+        description: 'Số Id ứng dụng (cần thiết khi sử dụng thao tác *_id operations)'
         required: false
       
       debug_enabled:
-        description: 'Run the build with RDP debugging enabled'
+        description: 'Chạy bản dựng có bật gỡ lỗi RDP'
         required: false
         default: false
       itunes_debug_enabled:
-        description: 'Run the build with ngrok debugging enabled'
+        description: 'Chạy bản dựng với bật gỡ lỗi ngrok'
         required: false
         default: false
 
